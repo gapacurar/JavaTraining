@@ -8,7 +8,7 @@ package javatraining;
 /**
  *
  * @author gheorgheaurelpacurar
- * @version 0.3
+ * @version 0.4
  * 
  */
 public class JavaTraining {
@@ -22,6 +22,7 @@ public class JavaTraining {
         System.out.println("after cloning an existing GitHub Repository and ");
         System.out.println("create a new project from ");
         System.out.println("this existing one having the name Java Training :)");
+        System.out.println("-----------------------------------------");
     }
     
 }
