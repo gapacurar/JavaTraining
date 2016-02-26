@@ -8,7 +8,7 @@ package javatraining;
 /**
  *
  * @author gheorgheaurelpacurar
- * @version 0.4
+ * @version 0.5
  * 
  */
 public class JavaTraining {
@@ -18,6 +18,7 @@ public class JavaTraining {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("-----------------------------------------");
         System.out.println("This is just a small example ");
         System.out.println("after cloning an existing GitHub Repository and ");
         System.out.println("create a new project from ");
