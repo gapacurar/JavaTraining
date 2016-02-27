@@ -21,7 +21,7 @@ public class JavaTraining {
 
     }
     
-    private static void display(){
+    public static void display(){
     
         System.out.println("-----------------------------------------");
         System.out.println("This is just a small example ");
