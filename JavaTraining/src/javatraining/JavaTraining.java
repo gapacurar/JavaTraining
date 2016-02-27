@@ -3,8 +3,7 @@
  * We'll create a separate branch for each training session.
  */
 package javatraining;
-
-/**
+ /**
  *
  * @author gheorgheaurelpacurar
  * @version 1.0
@@ -29,6 +28,8 @@ public class JavaTraining {
         System.out.println("create a new project from ");
         System.out.println("this existing one having the name Java Training :)");
         System.out.println("-----------------------------------------");
+        
+        System.
     
     }
   
