@@ -7,7 +7,7 @@ package javatraining;
  *
  * @author gheorgheaurelpacurar
  */
-public class Car {
+public class Car implements Saleable, Rentable{
     /**
      @enum enumeration of accepted car colors
      */
@@ -77,5 +77,25 @@ public class Car {
         else if (newSpeed < speed){
             increaseSpeed(newSpeed);
         }
+    }
+    /**
+     Abstract method defined in Saleable interface implemented by class car
+     * is implemented here.
+     * @override Saleable.getSalePrice() method
+     * 
+     */
+    @Override
+    public int getSalePrice(){
+        return(12000);
+    }
+       /**
+     Abstract method defined in Rentable interface implemented by class car
+     * is implemented here.
+     * @override Rentable.getDailyRentPrice() method
+     * 
+     */
+    @Override
+    public int getDailyRentPrice(){
+        return(250);
     }
 }
