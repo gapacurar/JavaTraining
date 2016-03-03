@@ -17,6 +17,15 @@ public class JavaTraining {
     public static void main(String[] args) {
         // TODO code application logic here
         display();
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        int c = 5;
+        System.out.println("Result is: "+(a+b+c));
+        Car automobile = new Car();
+        short speed = 100;
+        System.out.println("Actual speed of car is: "+ automobile.getSpeed());
+        automobile.increaseSpeed(speed);
+        System.out.println("New speed of car is: "+ automobile.getSpeed());
 
     }
     
@@ -28,9 +37,6 @@ public class JavaTraining {
         System.out.println("create a new project from ");
         System.out.println("this existing one having the name Java Training :)");
         System.out.println("-----------------------------------------");
-        
-        System.
-    
     }
   
 
