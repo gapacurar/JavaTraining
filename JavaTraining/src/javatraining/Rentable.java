@@ -13,7 +13,7 @@ public interface Rentable {
      /**
      @const REC_RENT_PRICE is recommended price to sell
      */
-    public final boolean RENTABLE = true;
+    public static final boolean RENTABLE = true;
     
     /**
      * Method returns the value of item that implements the saleable interface.

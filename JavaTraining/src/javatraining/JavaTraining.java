@@ -29,10 +29,12 @@ public class JavaTraining {
         System.out.println("Actual speed of car is: "+ automobile.getSpeed());
         automobile.increaseSpeed(speed);
         System.out.println("New speed of car is: "+ automobile.getSpeed());
-        System.out.println("This car is saleable? " + automobile.SALEABLE);
-        System.out.println("This car is saleable? " + automobile.RENTABLE);
-        System.out.println("Sale price is: " + automobile.getSalePrice());
-        System.out.println("Daily rental price is: " + automobile.getDailyRentPrice());
+        System.out.println("This car is saleable? " + Car.SALEABLE);
+        System.out.println("This car is saleable? " + Car.RENTABLE);
+        int salePrice = automobile.getSalePrice();
+        System.out.println("Sale price is: " + salePrice);
+        int dailyRebtPrice = automobile.getDailyRentPrice();
+        System.out.println("Daily rental price is: " + dailyRebtPrice);
     }
     /**
      Method displays few text messages.

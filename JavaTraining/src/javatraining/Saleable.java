@@ -11,7 +11,7 @@ public interface Saleable {
     /**
      @const REC_SALE_PRICE is recommended price to sell
      */
-    public final boolean SALEABLE = true;
+    public static final boolean SALEABLE = true;
     
     /**
      * Method returns the value of item that implements the saleable interface.
