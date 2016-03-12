@@ -9,7 +9,7 @@ package javatraining;
  */
 public interface Saleable {
     /**
-     @const REC_SALE_PRICE is recommended price to sell
+     @const SALEABLE confirm that this item is saleable
      */
     public static final boolean SALEABLE = true;
     
