@@ -19,11 +19,12 @@ public class Car implements Saleable, Rentable{
     /**
      Constructors
      */
-    public Car(){
+    public void Car(){
         name = "Default car name";
         speed = 90;
+        color = Color.BLACK;
     }
-    public Car(String carName, short carSpeed, Color carColor){
+    public void Car(String carName, short carSpeed, Color carColor){
         name = carName;
         speed = carSpeed;
         color = carColor;
