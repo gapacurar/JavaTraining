@@ -42,7 +42,10 @@ public class JavaTraining {
         // Increase speed to 150
         short secondSpeed = 150;
         automobile.increaseSpeed(secondSpeed);  
-
+        // testing casting 
+        Object object = new Car(); // works because of implicit casting
+        // Car newCar = object; requires a casting to SubClass named Car
+        Car newCar = (Car)object;
         
     }   
     
