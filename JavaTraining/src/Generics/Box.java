@@ -1,10 +1,9 @@
 /*
  * copyright a-sti.ro
  */
-package javatraining;
+package Generics;
 
 /**
- *
  * @author gheorgheaurelpacurar
  * Generic class, generic method 
  * @param <T> generic type
@@ -37,26 +36,5 @@ public class Box<T> {
     public <U extends Number> void inspect(U u){
         System.out.println("T: " + t.getClass().getName());
         System.out.println("U: " + u.getClass().getName());
-    }
-    /**
-     main method of class. 
-     * @param args
-     * @argument args 
-     */
-    public static void main(String[] args) {
-        // create a Box for Integers
-        Box<Integer> integerBox = new Box<>();
-        // set value of Integer field t to 10
-        integerBox.set(10);
-        //integerBox.inspect("some text"); // error: this is still String!
-        // call inspect method with an Integer parameter
-        Integer intObject;
-        intObject= 20;  
-        integerBox.inspect(intObject);
-        // call inspet method with a Double object
-        Double doubleObject;
-        doubleObject = 30.30;
-        integerBox.inspect(doubleObject);
-        
     }
 }
