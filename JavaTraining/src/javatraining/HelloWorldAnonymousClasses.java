@@ -8,13 +8,18 @@ package javatraining;
  * @author gheorgheaurelpacurar
  */
 public class HelloWorldAnonymousClasses {
+    // define constants for languages
+    static final int ENGLISH = 0;
+    static final int FRENCH =1;
+    static final int SPANISH =2;
     // Inner interface HelloWorld
     interface HelloWorld {
         public void greet();
         public void greetSomeone(String someone);
     }
     // Method sayHello prints 
-    public void sayHello() {
+    public void sayHello(int language) {
+
         // Local class EnglishGreetings implemented in the method sayHello()
         class EnglishGreeting implements HelloWorld {
             String name = "world";
@@ -58,14 +63,28 @@ public class HelloWorldAnonymousClasses {
                 System.out.println("Hola, " + name);
             } // end of anonymous class
         };
-        englishGreeting.greet();
-        frenchGreeting.greetSomeone("Fred");
-        spanishGreeting.greet();
+        switch (language) {
+            case ENGLISH:
+                englishGreeting.greet();
+                break;
+            case FRENCH:
+                frenchGreeting.greetSomeone("Fred");
+                break;
+            case SPANISH:
+                spanishGreeting.greet();
+                break;
+            default:
+                System.out.println("Please predefined constants");
+                break;
+        }
     }
     // main method
     public static void main(String... args) {
         HelloWorldAnonymousClasses myApp =
             new HelloWorldAnonymousClasses();
-        myApp.sayHello();
+        myApp.sayHello(ENGLISH);
+        myApp.sayHello(FRENCH);
+        myApp.sayHello(SPANISH);
+        myApp.sayHello(5);
     }            
 }
