@@ -9,16 +9,22 @@ package javatraining;
  */
 public class HelloWorldAnonymousClasses {
     // define constants for languages
-    static final int ENGLISH = 0;
-    static final int FRENCH =1;
-    static final int SPANISH =2;
+    //static final int ENGLISH = 0;
+    //static final int FRENCH =1;
+    //static final int SPANISH =2;
+
+    /**
+     * enumeration of languages to prevent bad argument values
+     */
+    public enum LANGUAGES {ENGLISH, FRENCH,SPANISH}
+    
     // Inner interface HelloWorld
     interface HelloWorld {
         public void greet();
         public void greetSomeone(String someone);
     }
     // Method sayHello prints 
-    public void sayHello(int language) {
+    public void sayHello(LANGUAGES language) {
 
         // Local class EnglishGreetings implemented in the method sayHello()
         class EnglishGreeting implements HelloWorld {
@@ -74,7 +80,7 @@ public class HelloWorldAnonymousClasses {
                 spanishGreeting.greet();
                 break;
             default:
-                System.out.println("Please predefined constants");
+                System.out.println("You should take Nobel Price!");
                 break;
         }
     }
@@ -82,9 +88,9 @@ public class HelloWorldAnonymousClasses {
     public static void main(String... args) {
         HelloWorldAnonymousClasses myApp =
             new HelloWorldAnonymousClasses();
-        myApp.sayHello(ENGLISH);
-        myApp.sayHello(FRENCH);
-        myApp.sayHello(SPANISH);
-        myApp.sayHello(5);
+        myApp.sayHello(LANGUAGES.ENGLISH);
+        //myApp.sayHello(LANGUAGES.FRENCH);
+        myApp.sayHello(LANGUAGES.SPANISH);
+        //myApp.sayHello(10);
     }            
 }
