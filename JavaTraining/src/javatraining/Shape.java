@@ -9,6 +9,8 @@ package javatraining;
  * Shape class as a superclass
  */
 public class Shape {
+    // define a static constant
+    public final static int SHAPE_ID = 1;
     // definition is keeping the text definition
     private final String definition = "A shape";
     // method returns definition

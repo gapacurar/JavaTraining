@@ -35,5 +35,9 @@ public class PolymorphicDefinitions {
         catch(IndexOutOfBoundsException e){
                 System.out.println("List of shapes is ended.");
         }
+        // test if a constant from Shape is iherited even it is static in Rectangle
+        Rectangle rect = new Rectangle();
+        int rectangleID = rect.SHAPE_ID;// ==> a warning is telling us to use class name!
+        System.out.println(rectangleID + " is rectangle ID");
     }
 }
