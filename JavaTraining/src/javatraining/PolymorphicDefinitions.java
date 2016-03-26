@@ -39,5 +39,8 @@ public class PolymorphicDefinitions {
         Rectangle rect = new Rectangle();
         int rectangleID = Rectangle.SHAPE_ID;// ==> a warning is telling us to use class name!
         System.out.println(rectangleID + " is rectangle ID");
+        System.out.println(Shape.cucu);
+        //System.out.println(Rectangle.cucu);
+        //System.out.println(rect.cucu);
     }
 }
