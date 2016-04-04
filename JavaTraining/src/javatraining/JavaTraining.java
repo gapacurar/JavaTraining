@@ -3,6 +3,9 @@
  * We'll create a separate branch for each training session.
  */
 package javatraining;
+
+import java.util.Properties;
+
  /**
  *
  * @author gheorgheaurelpacurar
@@ -74,6 +77,13 @@ public class JavaTraining {
         OuterClass.InnerClass.f=10;
         OuterClass.InnerClass.getF();
         */
+        Properties properties = System.getProperties();
+        System.out.println("Java Version:"+properties.getProperty("java.version"));
+        System.out.println("Java Home:"+properties.getProperty("java.home"));
+        System.out.println("Java VM vendor:"+properties.getProperty("java.vm.vendor"));
+        System.out.println("OS name:"+properties.getProperty("os.name"));
+        System.out.println("User name:"+properties.getProperty("user.name"));
+        System.out.println("----------------------------------------------------------");
     }
   
 
