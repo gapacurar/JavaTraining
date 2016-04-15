@@ -24,7 +24,10 @@ public class ElectronicBook {
     public static final int Y2015 = 1015;
     public static final int Y2016 = 2016;
     
-    enum YearOfPublication {
+    /**
+     * Year of publication as enumeration
+     */
+    public enum YearOfPublication {
     Y2005, Y2006, Y2007, Y2008, Y2009, Y2010, Y2011, Y2012, Y2013, Y2014, Y2015,
     Y2016
 }
@@ -32,7 +35,7 @@ public class ElectronicBook {
     public static final String AZW = "AZW";
     public static final String AZW3 = "AZW3";
     public static final String KF8 = "KF8";
-    public static final String NonDRM = "non-DRM MOBI";
+    public static final String NONDRM = "non-DRM MOBI";
     public static final String DRM = "Adobe DRM";
     public static final String PDF = "PDF";
     public static final String PRC = "PRC";
