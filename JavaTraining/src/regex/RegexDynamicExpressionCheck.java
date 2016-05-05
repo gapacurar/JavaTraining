@@ -2,11 +2,9 @@
  * gheorgheaurelpacurar
  */
 package regex;
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 /**
  *
  * @author gheorgheaurelpacurar
@@ -30,7 +28,8 @@ public class RegexDynamicExpressionCheck {
         // if the regular expression or pattern was found
         while (matcher.find()) {
             String result;
-            result = String.format("I found text \"%s\" starting at " + "index %d until index %d.", 
+            result = String.format("I found text \"%s\" starting at " + 
+                    "index %d until index %d.",
                     matcher.group(),
                     matcher.start(),
                     matcher.end());
@@ -40,6 +39,6 @@ public class RegexDynamicExpressionCheck {
         // if regular expression or pattern was not found in source string
         if (!found) {
             System.out.println("No match found :(");
-        } 
+        }
         }
     }
