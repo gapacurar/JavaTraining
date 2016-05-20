@@ -40,18 +40,18 @@ public class ApelStoredProcedure {
             connection.setAutoCommit(false);
             //insert a new person using stored procedures for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
-            String cnpTest = "'2334455647788'";
-            String cnp = "2334455647788";
-            String codLocalitate = "10";
-            String codJudet = "10";
-            String denumireLocalitate = "VASLUI";
-            String denumireJudet = "VASLUI";
+            String cnpTest = "'1324455647888'";
+            String cnp = "1324455647888";
+            String codLocalitate = "6";
+            String codJudet = "6";
+            String denumireLocalitate = "BAIA-MARE";
+            String denumireJudet = "BAIA-MARE";
             statement = connection.createStatement();
             String query = "SELECT CNP FROM PERSOANE WHERE CNP="+cnpTest;
             resultSet = null;
             resultSet = statement.executeQuery(query);
             if (!resultSet.next())             
-                insertPersoana(cnp, "DANA", "BUDACA", "60", "STRADA LUMINII, 4",codLocalitate);
+                insertPersoana(cnp, "GHEORGHE", "BAIMAREAN", "30", "STRADA MINEI, 28",codLocalitate);
             else{
                 System.out.println("Persons having cnp="+cnp+" is already in our DB.");
             }
@@ -96,7 +96,7 @@ public class ApelStoredProcedure {
                 formatter.format("%1$-13s %2$-25s %3$-25s %4$-6s %5$-25s %6$-15s %7$-15s","CNP", "NUME", "PRENUME", "VARSTA", "DOMICILIUL", "LOCALITATE","JUDET");
                 //System.out.println(currentCNP +currentPersoaneNume+currentPersoanePrenume+currentPersoaneVarsta+currentPersoaneDomiciliul);
                 System.out.println(sb.toString());
-                System.out.println("============="+ "========================="+ "========================="+ "======"+ "==============="+ "===============");
+                System.out.println("============="+ "========================="+ "========================="+ "======"+ "==============="+ "==============="+"==============="+"===============");
                 // display the content of table row by row
                 while(resultSet.next()){
                     currentCNP = resultSet.getString(1);
