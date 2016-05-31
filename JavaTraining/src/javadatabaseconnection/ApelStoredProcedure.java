@@ -40,18 +40,18 @@ public class ApelStoredProcedure {
             connection.setAutoCommit(false);
             //insert a new person using stored procedures for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
-            String cnpTest = "'1324455647888'";
-            String cnp = "1324455647888";
-            String codLocalitate = "6";
-            String codJudet = "6";
-            String denumireLocalitate = "BAIA-MARE";
-            String denumireJudet = "BAIA-MARE";
+            String cnpTest = "'1324455647558'";
+            String cnp = "1324455647558";
+            String codLocalitate = "7";
+            String codJudet = "7";
+            String denumireLocalitate = "DEJ";
+            String denumireJudet = "CLUJ";
             statement = connection.createStatement();
             String query = "SELECT CNP FROM PERSOANE WHERE CNP="+cnpTest;
             resultSet = null;
             resultSet = statement.executeQuery(query);
             if (!resultSet.next())             
-                insertPersoana(cnp, "GHEORGHE", "BAIMAREAN", "30", "STRADA MINEI, 28",codLocalitate);
+                insertPersoana(cnp, "DAN", "BARBILIAN", "90", "STRADA CIMITIRULUI, 2",codLocalitate);
             else{
                 System.out.println("Persons having cnp="+cnp+" is already in our DB.");
             }
