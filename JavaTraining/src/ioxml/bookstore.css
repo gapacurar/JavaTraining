@@ -1,0 +1,32 @@
+/*
+a-sti.ro
+*/
+/* 
+    Created on : Jun 4, 2016, 12:19:41 PM
+    Author     : gheorgheaurelpacurar
+*/
+body {
+    background-color: #d0e4fe;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+
+bookstore {
+    background-color: #d0e4fe;
+    font-family: "Verdana";
+    font-size: 24px;
+    color: red;
+}
+
+book {
+    color: blue;
+}
+
