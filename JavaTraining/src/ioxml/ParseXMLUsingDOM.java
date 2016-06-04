@@ -34,7 +34,10 @@ public class ParseXMLUsingDOM {
             System.out.println("\nCurrent Element :" + nNode.getNodeName());
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                Element eElement = (Element) nNode;
-               System.out.println("Book ISBN : " + eElement.getAttribute("isbn"));
+               System.out.println("Book ISBN : " 
+               + eElement.getElementsByTagName("isbn")
+                  .item(0)
+                  .getTextContent());
                System.out.println("Book title : " 
                + eElement
                   .getElementsByTagName("title")
