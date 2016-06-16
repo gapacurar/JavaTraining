@@ -13,7 +13,7 @@ public class JDBCC {
     {
         String user = "";
         String password = "";
-        //String url = "jdbc:derby://localhost:1527/seconddb;create=true";
+        //String url = "jdbc:derby://localhost:1527/firstdb;create=true";
         String url = "jdbc:derby:firstdb;create=true";
         String driver = "org.apache.derby.jdbc.ClientDataSource40";
         //String driver = "org.apache.derby.jdbc.ClientXADataSource40";
