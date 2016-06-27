@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE bookstore SYSTEM "bookstore.dtd">
 <!-- associate a stylesheet with XML -->
-<?xml-stylesheet type="text/css" href="/Users/gheorgheaurelpacurar/Desktop/Training Java 8/JavaProjects/GheorgheAurelPacurar/JavaTraining/JavaTraining/src/ioxml/bookstore.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="/Users/gheorgheaurelpacurar/Desktop/Training Java 8/JavaProjects/GheorgheAurelPacurar/JavaTraining/JavaTraining/src/ioxml/bookstore.css" ?> -->
 <!--
 bookstore XML file with the content of bookstore
 -->
@@ -29,3 +29,4 @@ bookstore XML file with the content of bookstore
         <price>33.56</price>
     </book>        
 </bookstore>
+

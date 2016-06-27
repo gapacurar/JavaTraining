@@ -1,32 +1,34 @@
-/*
- * This is a package created to keep all Java Trainings examples of code.
- * We'll create a separate branch for each training session.
- */
+
 package javatraining;
 
 import java.util.Properties;
 
+/*
+ * a-sti.ro
+package javatraining;
+// we need some external package to be imported
+import java.util.Properties;
  /**
- *
  * @author gheorgheaurelpacurar
  * @version 1.0
- *
  */
 public class JavaTraining {
-
     /**
+     * Method main is the point of entrance in any Java Program. 
+     * Main is a must. We can have only one main method for one
+     * Java application!
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // tis is a way to make a comment on a line
+        /*
+            This is how we create comments on multiple lines
+        */
+        /**
+         * This comment will be included in JavaDoc.
+         */
         display();
         // work with inline arguments of main method
-        //int a = Integer.parseInt(args[0]);
-        //int b = Integer.parseInt(args[1]);
-        //int c = 5;
-        //System.out.println("Result is: "+(a+b+c));
-        // create an instance of new created type named Car and call few methods
-        // of class or implemented from interfaces
         Car automobile = new Car();
         //see what color is the car?
         System.out.println("Initial car color is:" + automobile.getColor());
