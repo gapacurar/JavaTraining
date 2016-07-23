@@ -1,11 +1,18 @@
 /*
  * a-sti.ro 
 */
+
+/* this is
+a multiline 
+comment
+*/
+
 // we keep all class definitions togheter in same .jar archives named packages
 // a package is in fact a directory on the disk
 package javatraining;
 // we need some external package to be imported
- /**
+
+/**
  * @author gheorgheaurelpacurar
  * @version 1.0
  */
@@ -17,6 +24,7 @@ public class HelloWorldForJava {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+    
         // tis is a way to make a comment on a line
         /*
             This is how we create comments on multiple lines
@@ -24,6 +32,6 @@ public class HelloWorldForJava {
         /**
          * This comment will be included in JavaDoc.
          */
-        System.out.println("Hello world from Java! This is my first class!");
+        System.out.println("Hello viezure!");
     }// this closes main mandatory method
 } // this closes the class JavaTraining
