@@ -41,5 +41,6 @@ public class BasicMathDemo {
         System.out.println(randomNumber + "is a random number");
         randomNumber = (int)(Math.random() * 10);
         System.out.println(randomNumber + "is a random number");
+        // an added text
     }
 }
