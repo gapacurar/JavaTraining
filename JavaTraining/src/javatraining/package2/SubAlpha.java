@@ -2,7 +2,10 @@
  * copyright a-sti.ro
  */
 package javatraining.package2;
+//
+
 import javatraining.package1.Alpha;
+
 /**
  * Class is subclass of Alpha Class from package1. The import is necessary.
  * Also Alpha should be public in package1.

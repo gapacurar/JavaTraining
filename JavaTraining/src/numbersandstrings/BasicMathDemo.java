@@ -12,6 +12,7 @@ public class BasicMathDemo {
         double a = -191.635;
         double b = 43.74;
         int c = 16, d = 45;
+
         System.out.printf("The absolute value " + "of %.3f is %.3f%n", a, Math.abs(a));
         System.out.printf("The ceiling of " + "%.2f is %.0f%n", b, Math.ceil(b));
         System.out.printf("The floor of " + "%.2f is %.0f%n", b, Math.floor(b));
