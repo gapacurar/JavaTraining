@@ -30,12 +30,15 @@ public class JavaTraining {
         display();
         // work with inline arguments of main method
         Car automobile = new Car();
+        //test to see if toString() method exists for Car
+        System.out.println("Testez daca exista metoda toString() si am obtinut: "+automobile.toString());
         //see what color is the car?
-        System.out.println("Initial car color is:" + automobile.getColor());
-        short speed = 100;
+        System.out.println("Initial car color is: " + automobile.getColor());
+        short cucubawViteza = 100;
         System.out.println("Actual speed of car is: "+ automobile.getSpeed());
-        automobile.increaseSpeed(speed);
+        automobile.increaseSpeed(cucubawViteza);
         System.out.println("New speed of car is: "+ automobile.getSpeed());
+        //
         System.out.println("This car is saleable? " + Car.SALEABLE);
         System.out.println("This car is rentable? " + Car.RENTABLE);
         int salePrice = automobile.getSalePrice();

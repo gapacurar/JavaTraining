@@ -92,5 +92,6 @@ public class HelloWorldAnonymousClasses {
         //myApp.sayHello(LANGUAGES.FRENCH);
         myApp.sayHello(LANGUAGES.SPANISH);
         //myApp.sayHello(10);
+        myApp.sayHello(LANGUAGES.SPANISH);
     }            
 }

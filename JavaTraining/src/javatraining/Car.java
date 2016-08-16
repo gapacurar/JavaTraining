@@ -9,11 +9,28 @@ public class Car implements Saleable, Rentable{
     /**
      @enum enumeration of accepted car colors
      */
-    public enum Color { WHITE, RED, YELLOW, GREEN, GRAY, BLACK };
+    //public enum Color { WHITE, RED, YELLOW, GREEN, GRAY, BLACK };
+    public static class Color { 
+        public static final int WHITE =0;
+        public static final int RED = 1;
+        public static final int YELLOW = 2;
+        public static final int GREEN = 3;
+        public static final int GRAY = 4;
+        public static final int BLACK = 5; 
+                
+    };
     /**
      Internal hidden fields / attributes
      */
-    private Color color;
+    private int color;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
     private String name;
     private short speed;
     /**
@@ -22,29 +39,37 @@ public class Car implements Saleable, Rentable{
     public void Car(){
         name = "Default car name";
         speed = 90;
-        color = Color.BLACK;
+        color = Car.Color.BLACK;
     }
-    public void Car(String carName, short carSpeed, Color carColor){
-        name = carName;
-        speed = carSpeed;
-        color = carColor;
+    public void Car(String name, short speed, int color){
+        this.name = name;
+        this.speed = speed;
+        if(color <= 5 && color >=0){
+            this.color = color;
+        } else {
+            color = Car.Color.BLACK;
+        }
     }
     /*get-ers and set-ers*/
     public String getName(){
         return(name);
     }
+    /*
     public Color getColor(){
         return(color);
     }
+    */
     public short getSpeed(){
         return(speed);
     }
     public void setName(String newName){
         name = newName;
     }
+    /*
     public void setColor(Color newColor){
         color = newColor;
     }
+    */
     public void setSpeed(short newSpeed){
         speed = newSpeed;
     }
@@ -82,6 +107,7 @@ public class Car implements Saleable, Rentable{
      * @override Saleable.getSalePrice() method
      * 
      */
+    //
     @Override
     public int getSalePrice(){
         return(12000);

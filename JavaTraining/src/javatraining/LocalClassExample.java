@@ -26,14 +26,19 @@ public class LocalClassExample {
             String formattedPhoneNumber = null;
             // local class constructor 
             PhoneNumber(String phoneNumberToBeValidated){
-                // replace everything out of digits with ""
-                String currentNumber = phoneNumberToBeValidated.replaceAll(
-                  regularExpression, "");
-                // chack the number of digits to be equal with 10
-                if (currentNumber.length() == numberLength)
-                    formattedPhoneNumber = currentNumber;
-                else
-                    formattedPhoneNumber = null;
+                if(null != phoneNumberToBeValidated){
+                    // replace everything out of digits with ""
+                    String currentNumber = phoneNumberToBeValidated.replaceAll(
+                      regularExpression, "");
+                    // chack the number of digits to be equal with 10
+                    if (currentNumber.length() == numberLength)
+                        formattedPhoneNumber = currentNumber;
+                    else
+                        formattedPhoneNumber = null;
+                }
+                else{
+                    System.out.println("False parameter");
+                }
             }
             // getter that returns formatedPhoneNumber
             public String getNumber() {
