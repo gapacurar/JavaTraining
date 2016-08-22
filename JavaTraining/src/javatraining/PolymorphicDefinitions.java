@@ -24,6 +24,8 @@ public class PolymorphicDefinitions {
         // print definitions on console
         short shape = 0;
         try{
+            // generate an exception
+            //listOfShapes.get(-1);
             while(listOfShapes.get(shape) != null){
                 Shape currentShape;
                 // use cast to type is possible because of polymorphic structure
@@ -31,15 +33,19 @@ public class PolymorphicDefinitions {
                 System.out.println("Definition is: " + currentShape.getDefinition());
                 shape++;
             }
-        }
+        }    
         catch(IndexOutOfBoundsException e){
+                System.out.println("Obiectul exceptie IndexOutOfBound contine: ");
                 System.out.println("List of shapes is ended.");
         }
+        finally{
+        
+        }
         // test if a constant from Shape is iherited even it is static in Rectangle
-        Rectangle rect = new Rectangle();
-        int rectangleID = Rectangle.SHAPE_ID;// ==> a warning is telling us to use class name!
-        System.out.println(rectangleID + " is rectangle ID");
-        System.out.println(Shape.cucu);
+        //Rectangle rect = new Rectangle();
+        //int rectangleID = Rectangle.SHAPE_ID;// ==> a warning is telling us to use class name!
+        //System.out.println(rectangleID + " is rectangle ID");
+        //System.out.println(Shape.cucu);
         //System.out.println(Rectangle.cucu);
         //System.out.println(rect.cucu);
     }
