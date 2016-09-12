@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon Jun 13 16:59:10 EEST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0155-4a0f-167e-000006c98a88 
+Sat Sep 03 10:20:27 EEST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0156-eeeb-859d-000006c967b0 
 on database directory /Users/gheorgheaurelpacurar/Desktop/Training Java 8/JavaProjects/GheorgheAurelPacurar/JavaTraining/JavaTraining/firstdb with class loader sun.misc.Launcher$AppClassLoader@63947c6b 
 Loaded from file:/Users/gheorgheaurelpacurar/GlassFish_Server/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -8,6 +8,6 @@ java.runtime.version=1.8.0_71-b15
 user.dir=/Users/gheorgheaurelpacurar/Desktop/Training Java 8/JavaProjects/GheorgheAurelPacurar/JavaTraining/JavaTraining
 os.name=Mac OS X
 os.arch=x86_64
-os.version=10.11.5
+os.version=10.11.6
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

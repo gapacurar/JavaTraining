@@ -5,6 +5,9 @@
  */
 package collections;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * This application manages a store of electronic books format.
  * 
@@ -17,7 +20,9 @@ public class ElectronicBooksStore {
         // declare an array of ElectronicBooks
         ElectronicBook[] books;
         books = new ElectronicBook[3];
-
+        // write in log  message that 
+        
+        Logger.getLogger("MyLogg").log(Level.INFO, null, "Matrix createdOk");
         // create a new eBook
         String isbn = "978-606-758-671-8";
         String[] authors = new String[]{"Lev Grossman","Mira Grossman"};
@@ -33,8 +38,10 @@ public class ElectronicBooksStore {
         };
         eBook.setRemarksAndNotes(new String[] {""});
         eBook.setDownloadLinks(downloadLinks);
+        Logger.getLogger("MyLogg").log(Level.INFO, null, "New book created");
         // Add eBook to the books
         books[0] = eBook;
+        Logger.getLogger("MyLogg").log(Level.INFO, null, "Book addedin matrix");
          // create a new eBook
         isbn = "978-606-758-667-1";
         authors = new String[]{"Bogdan Munteanu"};

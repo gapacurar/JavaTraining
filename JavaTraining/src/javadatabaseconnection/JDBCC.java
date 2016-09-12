@@ -46,7 +46,8 @@ public class JDBCC {
             {
                 System.out.println("No rows found in ResultSet");
             }
-        }                
+        }
+        
         catch (Exception ex)
         {
             ex.printStackTrace();
