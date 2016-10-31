@@ -13,7 +13,7 @@ import java.util.Locale;
 /**
  * @author gheorgheaurelpacurar
  */
-public class ReportPersoane {
+public class StatementUsageExample {
     public static void main (String[] args)
     {
         String user = "derby";

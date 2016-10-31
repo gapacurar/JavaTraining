@@ -3,6 +3,7 @@
  */
 package javadatabaseconnection;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -40,12 +41,12 @@ public class ApelStoredProcedure {
             connection.setAutoCommit(false);
             //insert a new person using stored procedures for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
-            String cnpTest = "'1324455647558'";
-            String cnp = "1324455647558";
-            String codLocalitate = "7";
-            String codJudet = "7";
-            String denumireLocalitate = "DEJ";
-            String denumireJudet = "CLUJ";
+            String cnpTest = "'168050722234'";
+            String cnp = "168050722234";
+            String codLocalitate = "9";
+            String codJudet = "9";
+            String denumireLocalitate = "PALTINIS";
+            String denumireJudet = "SIBIU";
             statement = connection.createStatement();
             String query = "SELECT CNP FROM PERSOANE WHERE CNP="+cnpTest;
             resultSet = null;
@@ -69,7 +70,7 @@ public class ApelStoredProcedure {
             resultSet = null;
             resultSet = statement.executeQuery(query);
             if (!resultSet.next())            
-                insertJudet(codJudet,denumireJudet);        
+                StoredProcedures.insertJudet(codJudet, denumireJudet);        
             else{
                 System.out.println("Judetul having cod="+codJudet+" is already in our DB.");
             }            
@@ -283,63 +284,4 @@ public class ApelStoredProcedure {
             }
         }
     } // stored procedures call 
-    /**
-     *
-     * @param sCodJudet
-     * @param sDenumireJudet
-     * @throws SQLException
-     */    
-    public static void insertJudet(String sCodJudet, String sDenumireJudet) throws SQLException {
-        String user = "derby";
-        String password = "derby";
-        String url = "jdbc:derby://localhost:1527/persoane;create=true";
-        String driver = "org.apache.derby.jdbc.ClientDataSource40";
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-        try
-        {
-            Class driverClass = Class.forName(driver);
-            connection = DriverManager.getConnection(url, user, password);
-            statement = connection.createStatement();
-            //call stored procedure
-            String DML = "INSERT INTO DERBY.JUDETE VALUES (?, ?)";
-            PreparedStatement pstmnt = connection.prepareStatement(DML);
-            pstmnt.setShort(1, Short.parseShort(sCodJudet));
-            pstmnt.setString(2, sDenumireJudet);
-            pstmnt.execute();
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-            throw new SQLException();
-        }
-        finally
-        {
-            if (resultSet != null)
-            {
-                try
-                {
-                    resultSet.close();
-                }
-                catch (Exception ex){ex.printStackTrace();}
-            }
-            if (statement != null)
-            {
-                try
-                {
-                    statement.close();
-                }
-                catch (Exception ex){ex.printStackTrace();}
-            }	
-            if (connection != null)
-            {
-                try
-                {
-                    connection.close();
-                }
-                catch (Exception ex){ex.printStackTrace();}
-            }
-        }  
-    }
 }

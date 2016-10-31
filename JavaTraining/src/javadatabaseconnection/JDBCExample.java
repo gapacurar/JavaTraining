@@ -8,7 +8,7 @@ import java.sql.*;
  *
  * @author gheorgheaurelpacurar
  */
-public class JDBCC {
+public class JDBCExample {
     public static void main (String[] args)
     {
         String user = "";
@@ -47,10 +47,9 @@ public class JDBCC {
                 System.out.println("No rows found in ResultSet");
             }
         }
-        
-        catch (Exception ex)
+        catch (ClassNotFoundException | SQLException ex)
         {
-            ex.printStackTrace();
+            System.out.println(ex);
         }
         finally
         {
@@ -60,7 +59,7 @@ public class JDBCC {
                 {
                     resultSet.close();
                 }
-                catch (Exception ex){}
+                catch (Exception ex){System.out.println(ex);}
             }
             if (statement != null)
             {
@@ -68,7 +67,7 @@ public class JDBCC {
                 {
                     statement.close();
                 }
-                catch (Exception ex){}
+                catch (Exception ex){System.out.println(ex);}
             }	
             if (connection != null)
             {
@@ -76,7 +75,7 @@ public class JDBCC {
                 {
                     connection.close();
                 }
-                catch (Exception ex){}
+                catch (Exception ex){System.out.println(ex);}
             }
         }	
     }
