@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+eBook DTD 
+-->
+
+<!-- TODO define book vocabulary/syntax.   
+one bookstore has more books
+one book has more isbn, title, author, devices and price-->
+<!ELEMENT bookstore (book)*>
+<!ELEMENT book (isbn, title, authors, formats, price)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (#PCDATA)>
+<!ELEMENT formats (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+
+

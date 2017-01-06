@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<!-- associate a stylesheet with XML -->
+<!-- <?xml-stylesheet type="text/css" href="/Users/gheorgheaurelpacurar/Desktop/Training Java 8/JavaProjects/GheorgheAurelPacurar/JavaTraining/JavaTraining/src/ioxml/bookstore.css" ?> -->
+<!--
+bookstore XML file with the content of bookstore
+-->
+
+<bookstore>
+    <book>
+        <isbn>978-973-46-6106-0</isbn>
+        <title>Scurta istorie a samurailor</title>
+        <authors>Jonathan Clements</authors>
+        <formats>Adobe DRM, Adobe DRM</formats>
+        <price>19.96</price>
+    </book>
+    <book>
+        <isbn>978-973-46-6140-4</isbn>
+        <title>Lumea in Si bemol</title>
+        <authors>Dan Grigore, Dia Radu</authors>
+        <formats>Adobe DRM, Adobe DRM</formats>
+        <price>15.96</price>
+    </book>
+    <book>
+        <isbn>978-973-46-6093-3</isbn>
+        <title>Psihosociologie aplicata. Publicitatea</title>
+        <authors>Septimiu Chelcea</authors>
+        <formats>Adobe DRM, Adobe DR </formats>
+        <price>33.56</price>
+    </book>        
+</bookstore>
+
