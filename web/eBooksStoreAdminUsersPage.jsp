@@ -1,7 +1,5 @@
 <%-- 
-    Document   : eBooksStoreAdminUsersPage.JSP
-    Author     : SC Sallis Terra Service SRL
-    Copyright  : SC Sallis Terra Service SRL
+   
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="./css/eBooksStoreCSS.css">
     </head>
 <body>
-            <%-- test if actual user is authenticated and authorized --%>
+        <%-- test if actual user is authenticated and authorized --%>
         <c:choose>
                 <c:when test="${validUser == true}">   
                     <!-- include menu -->
