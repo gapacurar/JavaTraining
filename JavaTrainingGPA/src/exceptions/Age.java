@@ -15,14 +15,16 @@ public class Age {
 
     public static void main(String[] args) {
     try { 
-        ageInMonths(Integer.parseInt(args[0])); 
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+        String line;
+        line = scanner.nextLine();
+        System.out.println(ageInMonths(Integer.parseInt(line))); 
     } catch (NumberFormatException e) { 
         System.out.println("first program argument needs to be an int"); 
     }catch (IllegalArgumentException e) { 
         System.out.println(e.getMessage()); 
         System.out.println("Please introduce a positive age :) :");
-        //Scanner scanner = new Scanner();
-        
     } 
 } 
 
