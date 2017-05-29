@@ -50,10 +50,10 @@ public class Index extends HttpServlet {
         ResultSet resultSet = null;
         Statement statement = null;
         Connection connection = null;
-        String user = "ebooksstore" ;
-        String password = "ebooksstore";
-        String url = "jdbc:derby://localhost:1527/ebooksstore;create=true;";
-        String driver = "org.apache.derby.jdbc.ClientDriver40";
+        String user = "test";
+        String password = "test";
+        String url = "jdbc:derby://localhost:1527/ebooksstore;create=true";
+        String driver = "org.apache.derby.jdbc.ClientDriver";
         try
         {
             Class driverClass = Class.forName(driver);
