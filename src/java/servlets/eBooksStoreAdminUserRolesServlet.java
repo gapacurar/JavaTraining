@@ -40,10 +40,10 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
             // declare specific DB info
-            String user = "ebooksstore" ;
-            String password = "ebooksstore";
+            String user = "test" ;
+            String password = "test";
             String url = "jdbc:derby://localhost:1527/ebooksstore;create=true;";
-            String driver = "org.apache.derby.jdbc.ClientDriver40"; 
+            String driver = "org.apache.derby.jdbc.ClientDriver"; 
             // check push on Insert button
             if (request.getParameter("admin_user_roles_insert") != null) { // insert values from fields
                 // set connection paramters to the DB
@@ -61,7 +61,7 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
                     Class driverClass = Class.forName(driver);
                     connection = DriverManager.getConnection(url, user, password);
                     // realize the insert
-                    String DML = "INSERT INTO EBOOKSSTORE_USERS_ROLES VALUES (?)";
+                    String DML = "INSERT INTO EBOOKSSTORE_USER_ROLES VALUES (?)";
                     pstmnt = connection.prepareStatement(DML);
                     pstmnt.setString(1, role);
                     pstmnt.execute();
@@ -128,7 +128,7 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
                         connection.setAutoCommit(false);
                         for(String s : selectedCheckboxes){
                             // realize update of all selected rows
-                            String DML = "UPDATE EBOOKSSTORE_USERS_ROLES SET role=? WHERE role=?";
+                            String DML = "UPDATE EBOOKSSTORE_USER_ROLES SET role=? WHERE role=?";
                             pstmnt = connection.prepareStatement(DML);
                             pstmnt.setString(1, newrole);
                             pstmnt.setString(2, s);
@@ -217,7 +217,7 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
                     connection.setAutoCommit(false);
                     for(String s : selectedCheckboxes){
                         // realize delete of all selected rows
-                        String DML = "DELETE FROM EBOOKSSTORE_USERS_ROLES WHERE ROLE=?";
+                        String DML = "DELETE FROM EBOOKSSTORE_USER_ROLES WHERE ROLE=?";
                         pstmnt = connection.prepareStatement(DML);
                         pstmnt.setString(1, s);
                         pstmnt.execute();

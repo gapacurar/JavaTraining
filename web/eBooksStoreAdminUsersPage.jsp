@@ -25,10 +25,10 @@
                         var="snapshot" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
                         url="jdbc:derby://localhost:1527/ebooksstore;create=true;"
-                        user="ebooksstore"  
-                        password="ebooksstore"/>
+                        user="test"  
+                        password="test"/>
                         <sql:query dataSource="${snapshot}" var="result">
-                            SELECT EBOOKSSTORE_USERS.ID, EBOOKSSTORE_USERS.USERNAME, EBOOKSSTORE_USERS.PASSWORD, EBOOKSSTORE_USERS_ROLES.ROLE FROM EBOOKSSTORE_USERS, EBOOKSSTORE_USERS_ROLES WHERE EBOOKSSTORE_USERS.ROLE = EBOOKSSTORE_USERS_ROLES.ROLE ORDER BY USERNAME, ROLE ASC 
+                            SELECT EBOOKSSTORE_USERS.ID, EBOOKSSTORE_USERS.USERNAME, EBOOKSSTORE_USERS.PASSWORD, EBOOKSSTORE_USER_ROLES.ROLE FROM EBOOKSSTORE_USERS, EBOOKSSTORE_USER_ROLES WHERE EBOOKSSTORE_USERS.ROLE = EBOOKSSTORE_USER_ROLES.ROLE ORDER BY USERNAME, ROLE ASC 
                         </sql:query>
                         <table border="1" width="100%">
                             <tr>
@@ -53,10 +53,10 @@
                         var="snapshotroles" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
                         url="jdbc:derby://localhost:1527/ebooksstore;create=true;"
-                        user="ebooksstore"  
-                        password="ebooksstore"/>
+                        user="test"  
+                        password="test"/>
                         <sql:query dataSource="${snapshotroles}" var="resultroles">
-                            SELECT ROLE from EBOOKSSTORE_USERS_ROLES ORDER BY ROLE ASC 
+                            SELECT ROLE from EBOOKSSTORE_USER_ROLES ORDER BY ROLE ASC 
                         </sql:query>
                         <table class="tablecenterdwithborder">
                             <tr><td>    

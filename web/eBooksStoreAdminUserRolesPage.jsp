@@ -28,10 +28,10 @@
                         var="snapshot" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
                         url="jdbc:derby://localhost:1527/ebooksstore;create=true;"
-                        user="ebooksstore"  
-                        password="ebooksstore"/>
+                        user="test"  
+                        password="test"/>
                         <sql:query dataSource="${snapshot}" var="result">
-                            SELECT ROLE from EBOOKSSTORE_USERS_ROLES ORDER BY ROLE ASC 
+                            SELECT ROLE from EBOOKSSTORE_USER_ROLES ORDER BY ROLE ASC 
                         </sql:query>
                         <table border="1" width="100%">
                             <tr>

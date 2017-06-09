@@ -20,9 +20,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet is serving CITyAdminUsersPage.jsp
+ * Servlet is serving eBooksStoreAdminUsersPage.jsp
  * 
- * @author SC Sallis Terra Service SRL
+ * @author Gheorghe Aurel Pacurar
  */
 public class eBooksStoreAdminUsersServlet extends HttpServlet {
 
@@ -39,10 +39,10 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
             throws ServletException, IOException {
             response.setContentType("text/html;charset=UTF-8");
             // declare specific DB info
-            String user = "ebooksstore" ;
-            String password = "ebooksstore";
+            String user = "test" ;
+            String password = "test";
             String url = "jdbc:derby://localhost:1527/ebooksstore;create=true;";
-            String driver = "org.apache.derby.jdbc.ClientDriver40";  
+            String driver = "org.apache.derby.jdbc.ClientDriver";  
             // check push on Insert button
             if (request.getParameter("admin_users_insert") != null) { // insert values from fields
                 // set connection paramters to the DB
