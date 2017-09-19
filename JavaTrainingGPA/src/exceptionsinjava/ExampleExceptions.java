@@ -29,12 +29,17 @@ public class ExampleExceptions {
             throw new NumberFormatException("number format exception is here");
             //aruncExceptie(2);
             
-        }
+        } 
+        /*
         catch(NumberFormatException e){
             e.printStackTrace();
         }        
         catch(IllegalArgumentException ex){
             ex.printStackTrace();
+        }
+        */
+        finally{
+            System.out.println("Finalyy of try here!");
         }
 
     }
