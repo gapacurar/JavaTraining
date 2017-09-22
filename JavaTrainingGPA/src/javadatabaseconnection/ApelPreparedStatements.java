@@ -39,18 +39,18 @@ public class ApelPreparedStatements {
             connection.setAutoCommit(false);
             //insert a new person using prepared statements for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
-            String cnpTest = "'168050722234'";
-            String cnp = "168050722234";
-            String codLocalitate = "9";
-            String codJudet = "9";
-            String denumireLocalitate = "PALTINIS";
-            String denumireJudet = "SIBIU";
+            String cnpTest = "'168050733344'";
+            String cnp = "16805073344";
+            String codLocalitate = "15";
+            String codJudet = "15";
+            String denumireLocalitate = "TARGU MURES";
+            String denumireJudet = "MURES";
             statement = connection.createStatement();
             String query = "SELECT CNP FROM PERSOANE WHERE CNP="+cnpTest;
             resultSet = null;
             resultSet = statement.executeQuery(query);
             if (!resultSet.next())             
-                insertPersoana(cnp, "DAN", "BARBILIAN", "90", "STRADA CIMITIRULUI, 2",codLocalitate);
+                insertPersoana(cnp, "IONEL", "FUGARU", "90", "STRADA LUMINII, 2",codLocalitate);
             else{
                 System.out.println("Persons having cnp="+cnp+" is already in our DB.");
             }
@@ -166,14 +166,16 @@ public class ApelPreparedStatements {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+        String DML = "";
         try
         {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
             //call prepared statement to insert a new person
-            String DML = "INSERT INTO DERBY.PERSOANE VALUES (?, ?, ?, ?, ?,?)";
-            PreparedStatement pstmnt = connection.prepareStatement(DML);
+            DML = "INSERT INTO PERSOANE VALUES (?, ?, ?, ?, ?,?)";
+            PreparedStatement pstmnt;
+            pstmnt = connection.prepareStatement(DML);
             pstmnt.setString(1, sCNP);
             pstmnt.setString(2, sNume);
             pstmnt.setString(3, sPrenume);
@@ -236,7 +238,7 @@ public class ApelPreparedStatements {
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
             // call prepared statement to add a new localitate
-            String DML = "INSERT INTO DERBY.LOCALITATI VALUES (?, ?, ?)";
+            String DML = "INSERT INTO LOCALITATI VALUES (?, ?, ?)";
             PreparedStatement pstmnt = connection.prepareStatement(DML);
             pstmnt.setShort(1, Short.parseShort(sCodLocalitate));
             pstmnt.setString(2, sDenumireLocalitate);
