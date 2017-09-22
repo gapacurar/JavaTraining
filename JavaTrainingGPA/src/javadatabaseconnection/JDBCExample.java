@@ -13,8 +13,8 @@ public class JDBCExample {
     {
         String user = "test";
         String password = "test";
-        //String url = "jdbc:derby://localhost:1527/firstdb;create=true";
-        String url = "jdbc:derby://localhost:1527/ebooksstore;create=true";
+        String url = "jdbc:derby://localhost:1527/firstdb;create=true";
+        //String url = "jdbc:derby://localhost:1527/ebooksstore;create=true";
         //String url = "jdbc:derby:firstdb;create=true";
         //String driver = "org.apache.derby.jdbc.ClientDataSource40";
         String driver = "org.apache.derby.jdbc.ClientDriver";

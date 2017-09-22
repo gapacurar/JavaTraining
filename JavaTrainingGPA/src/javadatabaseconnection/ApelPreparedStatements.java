@@ -3,7 +3,6 @@
  */
 package javadatabaseconnection;
 
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -18,28 +17,27 @@ import java.util.logging.Logger;
 /**
  * @author gheorgheaurelpacurar
  */
-public class ApelStoredProcedure {
+public class ApelPreparedStatements {
     public static void main (String[] args)
     {
         ResultSet resultSet = null;
         Statement statement = null;
         Connection connection = null;
-        String user = "derby";
-        String password = "derby";
+        String user = "test";
+        String password = "test";
         String url = "jdbc:derby://localhost:1527/persoane;create=true";
         String driver = "org.apache.derby.jdbc.ClientDataSource40";
         try
         {
             try {
-                // check inserted value
                 Class driverClass = Class.forName(driver);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ApelStoredProcedure.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ApelPreparedStatements.class.getName()).log(Level.SEVERE, null, ex);
             }
             connection = DriverManager.getConnection(url, user, password);
             //start transaction
             connection.setAutoCommit(false);
-            //insert a new person using stored procedures for persons, localitati and judete.
+            //insert a new person using prepared statements for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
             String cnpTest = "'168050722234'";
             String cnp = "168050722234";
@@ -84,13 +82,7 @@ public class ApelStoredProcedure {
             resultSet = statement.executeQuery(query);
             if (resultSet!=null)
             {
-                String currentCNP = "";
-                String currentPersoaneNume = "";
-                String currentPersoanePrenume = "";
-                String currentPersoaneVarsta = "";
-                String currentPersoaneDomiciliul = "";
-                String currentLocalitateDenumire = "";
-                String currentJudetDenumire = "";
+
                 // format report header
                 StringBuilder sb = new StringBuilder();
                 Formatter formatter = new Formatter(sb, Locale.US);
@@ -100,13 +92,13 @@ public class ApelStoredProcedure {
                 System.out.println("============="+ "========================="+ "========================="+ "======"+ "==============="+ "==============="+"==============="+"===============");
                 // display the content of table row by row
                 while(resultSet.next()){
-                    currentCNP = resultSet.getString(1);
-                    currentPersoaneNume = resultSet.getString(2);
-                    currentPersoanePrenume = resultSet.getString(3);
-                    currentPersoaneVarsta = resultSet.getString(4);
-                    currentPersoaneDomiciliul = resultSet.getString(5);
-                    currentLocalitateDenumire = resultSet.getString(6);
-                    currentJudetDenumire = resultSet.getString(7);
+                    String currentCNP = resultSet.getString(1);
+                    String currentPersoaneNume = resultSet.getString(2);
+                    String currentPersoanePrenume = resultSet.getString(3);
+                    String currentPersoaneVarsta = resultSet.getString(4);
+                    String currentPersoaneDomiciliul = resultSet.getString(5);
+                    String currentLocalitateDenumire = resultSet.getString(6);
+                    String currentJudetDenumire = resultSet.getString(7);
                     sb = new StringBuilder();
                     formatter = new Formatter(sb, Locale.US);
                     formatter.format("%1$-13s %2$-25s %3$-25s %4$-6s %5$-25s %6$-15s %6$-15s",currentCNP, currentPersoaneNume, currentPersoanePrenume, currentPersoaneVarsta, currentPersoaneDomiciliul, currentLocalitateDenumire, currentJudetDenumire);
@@ -125,7 +117,7 @@ public class ApelStoredProcedure {
             try {
                 connection.rollback();
             } catch (SQLException ex1) {
-                Logger.getLogger(ApelStoredProcedure.class.getName()).log(Level.SEVERE, null, ex1);
+                Logger.getLogger(ApelPreparedStatements.class.getName()).log(Level.SEVERE, null, ex1);
             }  
         }        
         finally
@@ -157,7 +149,7 @@ public class ApelStoredProcedure {
         }
     }
     /**
-     * Methods call a database stored insert with parameters stored procedure
+     * Methods call a database stored insert with parameters prepared statement
      * @param sCNP
      * @param sNume
      * @param sPrenume
@@ -167,8 +159,8 @@ public class ApelStoredProcedure {
      * @throws SQLException
      */
     public static void insertPersoana(String sCNP, String sNume, String sPrenume, String sVarsta, String sDomiciliul, String sCodLocalitate) throws SQLException {
-        String user = "derby";
-        String password = "derby";
+        String user = "test";
+        String password = "test";
         String url = "jdbc:derby://localhost:1527/persoane;create=true";
         String driver = "org.apache.derby.jdbc.ClientDataSource40";
         Connection connection = null;
@@ -179,7 +171,7 @@ public class ApelStoredProcedure {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            //call stored procedure to insert a new person
+            //call prepared statement to insert a new person
             String DML = "INSERT INTO DERBY.PERSOANE VALUES (?, ?, ?, ?, ?,?)";
             PreparedStatement pstmnt = connection.prepareStatement(DML);
             pstmnt.setString(1, sCNP);
@@ -190,9 +182,8 @@ public class ApelStoredProcedure {
             pstmnt.setShort(6, Short.parseShort(sCodLocalitate));
             pstmnt.execute();
         }
-        catch (Exception ex)
+        catch (ClassNotFoundException | NumberFormatException | SQLException ex)
         {
-            ex.printStackTrace();
             throw new SQLException();
         }
         finally
@@ -203,15 +194,16 @@ public class ApelStoredProcedure {
                 {
                     resultSet.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }
-            if (statement != null)
+            if (statement == null)
             {
+            } else {
                 try
                 {
                     statement.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }	
             if (connection != null)
             {
@@ -219,10 +211,10 @@ public class ApelStoredProcedure {
                 {
                     connection.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }
         }
-    } // stored procedure call
+    } // prepared statement call
     /**
      * insertLocalitate inserts a new record to Localitati table
      * @param sCodLocalitate
@@ -231,8 +223,8 @@ public class ApelStoredProcedure {
      * @throws SQLException
      */
     public static void insertLocalitate(String sCodLocalitate, String sDenumireLocalitate, String sCodJudet) throws SQLException {
-        String user = "derby";
-        String password = "derby";
+        String user = "test";
+        String password = "test";
         String url = "jdbc:derby://localhost:1527/persoane;create=true";
         String driver = "org.apache.derby.jdbc.ClientDataSource40";
         Connection connection = null;
@@ -243,7 +235,7 @@ public class ApelStoredProcedure {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            // call stored procedure to add a new localitate
+            // call prepared statement to add a new localitate
             String DML = "INSERT INTO DERBY.LOCALITATI VALUES (?, ?, ?)";
             PreparedStatement pstmnt = connection.prepareStatement(DML);
             pstmnt.setShort(1, Short.parseShort(sCodLocalitate));
@@ -251,9 +243,8 @@ public class ApelStoredProcedure {
             pstmnt.setShort(3, Short.parseShort(sCodJudet));
             pstmnt.execute();
         }
-        catch (Exception ex)
+        catch (ClassNotFoundException | NumberFormatException | SQLException ex)
         {
-            ex.printStackTrace();
             throw new SQLException(); 
         }
         finally
@@ -264,7 +255,7 @@ public class ApelStoredProcedure {
                 {
                     resultSet.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }
             if (statement != null)
             {
@@ -272,7 +263,7 @@ public class ApelStoredProcedure {
                 {
                     statement.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }	
             if (connection != null)
             {
@@ -280,8 +271,8 @@ public class ApelStoredProcedure {
                 {
                     connection.close();
                 }
-                catch (Exception ex){ex.printStackTrace();}
+                catch (SQLException ex){ex.printStackTrace();}
             }
         }
-    } // stored procedures call 
+    } // prepared statements call 
 }
