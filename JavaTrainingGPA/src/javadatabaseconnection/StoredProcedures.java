@@ -3,6 +3,7 @@
  */
 package javadatabaseconnection;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -36,19 +37,22 @@ public class StoredProcedures {
             //statement = connection.createStatement();
             /*
              ***************************** call stored procedure - EXAMPLE ***************************************
+
             CallableStatement storedProcedureInsertJudet = connection.prepareCall("{call INSERT_JUDET(?,?)}");
             storedProcedureInsertJudet.setShort("codJudet", Short.parseShort(sCodJudet));
             storedProcedureInsertJudet.setString("sDenumire", sDenumireJudet);
             storedProcedureInsertJudet.executeUpdate();
-            */
+                        */
             /*
              **************************************** call prepared statement - EXAMPLE
             */
+
             String DML = "INSERT INTO JUDETE VALUES (?, ?)";
             PreparedStatement pstmnt = connection.prepareStatement(DML);
             pstmnt.setShort(1, Short.parseShort(sCodJudet));
             pstmnt.setString(2, sDenumireJudet);
             pstmnt.execute();
+
         }
         catch (ClassNotFoundException | SQLException | NumberFormatException ex)
         {
