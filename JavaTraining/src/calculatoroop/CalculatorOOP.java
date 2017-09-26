@@ -11,45 +11,29 @@ package calculatoroop;
  */
 public class CalculatorOOP {
 
-        private static Screen screen = new Screen();
-
-    /**
-     * Get the value of screen
-     *
-     * @return the value of screen
-     */
-    public Screen getScreen() {
-        return screen;
-    }
-
-    /**
-     * Set the value of screen
-     *
-     * @param screen new value of screen
-     */
-    public void setScreen(Screen screen) {
-        this.screen = screen;
-    }
-
+    static Frame calculator = new Frame();
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // run the computer
-        screen.clear();
+        calculator.start();
         // read first operand on a line (enter confirms the number is ready)
-        screen.displayMessage("Please insert first line containing your first integer");
-        //....
+        calculator.displayMessageOnScreen("Please insert your first operand:");
+        // read first operand
+        calculator.pushButtonsForOperand();
+        // read operator
+        calculator.displayMessageOnScreen("Please insert your first operator:");
         // read operation
-        screen.displayMessage("Please introduce your operation");
-        //...
+        calculator.pushButtonsForOperator();
         // read second operand on a line (enter confirms the number is ready)
-        screen.displayMessage("Please insert next line containing your first integer");
-        //....
+        calculator.displayMessageOnScreen("Please insert your second operand:");
+        // read second operand on a line (enter confirms the number is ready)
+        calculator.pushButtonsForOperand();
+        // read first operand on a line (enter confirms the number is ready)
+        calculator.displayMessageOnScreen("Please insert =:");
         // please push =
-        screen.displayMessage("Please introduce =");
-        //...
-        
+        calculator.pushButtonEqual();        
     }
     
 }

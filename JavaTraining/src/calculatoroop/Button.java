@@ -10,5 +10,16 @@ package calculatoroop;
  * @author gheor
  */
 public class Button {
+
+    public Character pushButton() {
+        return markup;
+    }
+
+    public void drawOnButton(Character markup) {
+        this.markup = markup;
+    }
+
+    private Character markup;
+     
     
 }
