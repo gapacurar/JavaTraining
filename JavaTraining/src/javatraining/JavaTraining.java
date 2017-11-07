@@ -2,6 +2,7 @@
 package javatraining;
 
 import java.util.Properties;
+import java.util.Vector;
 
 /*
  * a-sti.ro

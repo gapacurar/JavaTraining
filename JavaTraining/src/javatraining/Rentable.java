@@ -9,7 +9,7 @@ package javatraining;
  */
 public interface Rentable {
      /**
-     @const REC_RENT_PRICE is recommended price to sell
+     @const RENTABLE is a constant that said something is rentable
      */
     public static final boolean RENTABLE = true;
     

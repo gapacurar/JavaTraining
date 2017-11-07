@@ -42,8 +42,7 @@ public class HelloWorldAnonymousClasses {
         // create an EnglishGreeting object/instance 
         HelloWorld englishGreeting = new EnglishGreeting();
         // create an anonimous class that greets in French language
-        HelloWorld frenchGreeting;// end of anonimous class
-        frenchGreeting = new HelloWorld() {
+        HelloWorld frenchGreeting = new HelloWorld() {
             String name = "tout le monde";
             @Override
             public void greet() {
