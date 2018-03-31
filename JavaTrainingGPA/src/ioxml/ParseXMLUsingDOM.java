@@ -23,9 +23,7 @@ import org.xml.sax.SAXException;
 
 public class ParseXMLUsingDOM {
    public static void main(String[] args){
-
       try {	
-          
          File inputFile = new File("C:\\Users\\gheor\\OneDrive\\Documents\\NetBeansProjects\\JavaTrainings\\JavaTrainingGPA\\src\\ioxml\\bookstore.xml");
          DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
          DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();

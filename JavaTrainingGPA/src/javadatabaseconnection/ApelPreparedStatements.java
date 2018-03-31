@@ -39,12 +39,12 @@ public class ApelPreparedStatements {
             connection.setAutoCommit(false);
             //insert a new person using prepared statements for persons, localitati and judete.
             // if an exception will occur excetion will be catched. If nor we make commit.
-            String cnpTest = "'168050733344'";
-            String cnp = "16805073344";
-            String codLocalitate = "15";
-            String codJudet = "15";
-            String denumireLocalitate = "TARGU MURES";
-            String denumireJudet = "MURES";
+            String cnpTest = "'1930323024563'";
+            String cnp = "1930323024563";
+            String codLocalitate = "20";
+            String codJudet = "20";
+            String denumireLocalitate = "FALTICENI";
+            String denumireJudet = "SUCEAVA";
             statement = connection.createStatement();
             String query = "SELECT CNP FROM PERSOANE WHERE CNP="+cnpTest;
             resultSet = null;

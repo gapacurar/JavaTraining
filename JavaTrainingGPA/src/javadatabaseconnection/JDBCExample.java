@@ -33,8 +33,8 @@ public class JDBCExample {
             //statement.execute("CREATE TABLE FIRSTTABLE (ID INT PRIMARY KEY, NAME VARCHAR(12))");
             //statement.execute("INSERT INTO APP.FIRSTTABLE VALUES (10,'TEN'),(20,'TWENTY'),(30,'THIRTY')");
             resultSet = statement.executeQuery("SELECT ID, NAME FROM APP.FIRSTTABLE");
-            boolean resultSetHasRows = resultSet.next(); 
-            if (resultSetHasRows)
+            //boolean resultSetHasRows = resultSet.next(); 
+            if (null!=resultSet)
             {
                 int currentID;
                 String currentName = "";

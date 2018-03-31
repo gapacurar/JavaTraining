@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Contsains users
+-->
+
+<users>
+    <user>
+        <username>
+            Gheorghe
+        </username>
+        <password>
+            admin
+        </password>
+        <role>
+            admin
+        </role>
+    </user>
+    <user>
+        <username>
+            Viezure
+        </username>
+        <password>
+            veverita
+        </password>
+        <role>
+            user
+        </role>
+    </user>    
+    <user>
+        <username>
+            Paleacu
+        </username>
+        <password>
+            trufanda
+        </password>
+        <role>
+            user
+        </role>
+    </user>    
+</users>
