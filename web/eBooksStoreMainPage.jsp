@@ -19,7 +19,7 @@
         <%-- test if a valid user is logged in --%>
         <c:choose>
             <c:when test="${validUser == true}"> <%-- if a valid user is logged than display page --%>
-                <%@ include file="./utils/eBooksStoreMenu.jsp" %>
+                <%@ include file=".\\utils\\eBooksStoreMenu.jspf" %>
             </c:when>
             <c:otherwise> <%-- if no valid user than open Authentication and authorization that is index.jsp  page --%>
                 <c:redirect url="./index.jsp"></c:redirect>

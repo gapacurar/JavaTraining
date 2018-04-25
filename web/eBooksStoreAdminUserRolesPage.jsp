@@ -21,7 +21,7 @@
                 <c:when test="${validUser == true}">   
                     <%-- Build the table containing actual user roles and their roles in a master-detail view--%>
                     <%-- include menu --%>
-                    <%@ include file="./utils/eBooksStoreMenu.jsp" %>
+                    <%@ include file=".\\utils\\eBooksStoreMenu.jspf" %>
                     <%-- Master view --%>
                         <form action="${pageContext.request.contextPath}/eBooksStoreAdminUserRolesServlet" method="POST">
                         <sql:setDataSource 

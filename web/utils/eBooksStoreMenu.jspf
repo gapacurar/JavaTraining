@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link href="./css/menu.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="./css/eBooksStoreCSS.css">
     </head>
     <body>
         <ul id="nav">
@@ -33,7 +33,7 @@
                 <li><a href="#">Orders</a>
                     <ul>
                         <%-- <li><a href="./eBooksStoreOrderBookPage.jsp">Orders</a></li> --%>
-                        <%-- <li><a href="./eBooksStoreReportsPage.jsp">Orders</a></li> --%>
+                         
                         <li><a href="./eBooksStoreMainPage.jsp">Orders</a></li>
                     </ul>
                 </li>    
@@ -41,6 +41,6 @@
         </c:choose>                        
         <li><a href="./eBooksStoreExit.jsp">Log out</a></li>
         </ul>
-        <script src="js/script.js"></script>
+        <script src="..\\..\\js\\script.js"></script>
     </body>
 </html>

@@ -59,13 +59,16 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
                 {
                     //check driver and create connection
                     Class driverClass = Class.forName(driver);
-                    connection = DriverManager.getConnection(url, user, password);
-                    // realize the insert
-                    String DML = "INSERT INTO EBOOKSSTORE_USER_ROLES VALUES (?)";
-                    pstmnt = connection.prepareStatement(DML);
-                    pstmnt.setString(1, role);
-                    pstmnt.execute();
-                    // display a message for ok
+                    connection = DriverManager.getConnection(url, user, password); 
+                    // test if role field is empty & realize the insert
+                    if(!("".equals(role))){
+                        String DML = "INSERT INTO EBOOKSSTORE_USER_ROLES VALUES (?)";
+                        pstmnt = connection.prepareStatement(DML);
+                        pstmnt.setString(1, role);
+                        pstmnt.execute();
+                        // display a message for ok
+                    }
+
                 }
                 catch (ClassNotFoundException | SQLException ex)
                 {

@@ -18,7 +18,7 @@
         <c:choose>
                 <c:when test="${validUser == true}">   
                     <!-- include menu -->
-                    <%@ include file="./utils/eBooksStoreMenu.jsp" %>
+                    <%@ include file=".\\utils\\eBooksStoreMenu.jspf" %>
                     <%-- Master view --%>
                         <form action="${pageContext.request.contextPath}/eBooksStoreAdminUsersServlet" method="POST">
                         <sql:setDataSource 
