@@ -33,6 +33,7 @@ public class Frame {
         ecran.display(0);
     }
     /** Display message on scree
+     * @param message
      * @param messagen*/
     public void displayMessageOnScreen(String message){
         ecran.displayMessage(message);
