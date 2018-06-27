@@ -9,25 +9,25 @@ package computer;
  */
 public class Processor {
     
-    private Double primulOperand;
-    private Double alDoileaOperand;
-    private Double rezultat;
+    private Double firstOperand;
+    private Double secondOperand;
+    private Double result;
     private Character operator;
 
-    public Double getPrimulOperand() {
-        return primulOperand;
+    public Double getFirstOperand() {
+        return firstOperand;
     }
 
-    public void setPrimulOperand(Double primulOperand) {
-        this.primulOperand = primulOperand;
+    public void setFirstOperand(Double primulOperand) {
+        this.firstOperand = primulOperand;
     }
 
-    public Double getAlDoileaOperand() {
-        return alDoileaOperand;
+    public Double getSecondOperand() {
+        return secondOperand;
     }
 
-    public void setAlDoileaOperand(Double alDoileaOperand) {
-        this.alDoileaOperand = alDoileaOperand;
+    public void setSecondOperand(Double alDoileaOperand) {
+        this.secondOperand = alDoileaOperand;
     }
 
     public Character getOperator() {
@@ -37,28 +37,29 @@ public class Processor {
     public void setOperator(Character operator) {
         this.operator = operator;
     }
-    
+    /**Method computes +*/
     private Double add(){
-        rezultat = primulOperand + alDoileaOperand;
-        return rezultat;
+        result = firstOperand + secondOperand;
+        return result;
     }
-    
+    /**Method computes -*/
     private Double substract(){
-        rezultat = primulOperand - alDoileaOperand;
-        return rezultat;
+        result = firstOperand - secondOperand;
+        return result;
     }
-    
+    /**Method computes * */
     private Double multiply(){
-        rezultat = primulOperand * alDoileaOperand;
-        return rezultat;
+        result = firstOperand * secondOperand;
+        return result;
     }
-    
+    /**Method computes  / */
     private Double divide(){
-        rezultat = primulOperand / alDoileaOperand;
-        return rezultat;
+        result = firstOperand / secondOperand;
+        return result;
     }
-    
-    public Double calculeaza(){
+    /**Method identifies and execute the computatio
+     * @return result of computation*/
+    public Double compute(){
         
         switch(operator){
             case'+':
@@ -74,6 +75,6 @@ public class Processor {
                 divide();
                 break;     
         }
-        return rezultat;
+        return result;
     }
 }

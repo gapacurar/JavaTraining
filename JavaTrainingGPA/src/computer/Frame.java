@@ -45,10 +45,10 @@ public class Frame {
         Double operand = Double.valueOf(readit);
         ecran.displayMessage("You introduced operand: ");
         ecran.displayMessage(readit);
-        if(procesor.getPrimulOperand() == null)
-            procesor.setPrimulOperand(operand);
+        if(procesor.getFirstOperand() == null)
+            procesor.setFirstOperand(operand);
         else
-            procesor.setAlDoileaOperand(operand); 
+            procesor.setSecondOperand(operand); 
     }
 
     public void pushButtonsForOperator(){
@@ -61,7 +61,7 @@ public class Frame {
     }
     
     public void pushButtonEqual(){
-        Double result = procesor.calculeaza();
+        Double result = procesor.compute();
         ecran.displayMessage(result.toString());
     }
     

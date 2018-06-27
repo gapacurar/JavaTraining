@@ -38,55 +38,55 @@ public class ProcessorTest {
     }
 
     /**
-     * Test of getPrimulOperand method, of class Processor.
+     * Test of getFirstOperand method, of class Processor.
      */
     @Test
     public void testGetPrimulOperand() {
         System.out.println("getPrimulOperand");
         Processor instance = new Processor();
         Double expResult = null;
-        Double result = instance.getPrimulOperand();
+        Double result = instance.getFirstOperand();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setPrimulOperand method, of class Processor.
+     * Test of setFirstOperand method, of class Processor.
      */
     @Test
     public void testSetPrimulOperand() {
         System.out.println("setPrimulOperand");
         Double primulOperand = null;
         Processor instance = new Processor();
-        instance.setPrimulOperand(primulOperand);
+        instance.setFirstOperand(primulOperand);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getAlDoileaOperand method, of class Processor.
+     * Test of getSecondOperand method, of class Processor.
      */
     @Test
     public void testGetAlDoileaOperand() {
         System.out.println("getAlDoileaOperand");
         Processor instance = new Processor();
         Double expResult = null;
-        Double result = instance.getAlDoileaOperand();
+        Double result = instance.getSecondOperand();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setAlDoileaOperand method, of class Processor.
+     * Test of setSecondOperand method, of class Processor.
      */
     @Test
     public void testSetAlDoileaOperand() {
         System.out.println("setAlDoileaOperand");
         Double alDoileaOperand = null;
         Processor instance = new Processor();
-        instance.setAlDoileaOperand(alDoileaOperand);
+        instance.setSecondOperand(alDoileaOperand);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -122,14 +122,14 @@ public class ProcessorTest {
     }
 
     /**
-     * Test of calculeaza method, of class Processor.
+     * Test of compute method, of class Processor.
      */
     @Test
     public void testCalculeaza() {
         System.out.println("calculeaza");
         Processor instance = new Processor();
         Double expResult = null;
-        Double result = instance.calculeaza();
+        Double result = instance.compute();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

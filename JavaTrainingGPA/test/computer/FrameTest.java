@@ -25,7 +25,7 @@ public class FrameTest {
         System.out.println("start");
         Frame instance = new Frame();
         instance.start();
-        int valAfisat = instance.getEcran().getValoareAfisata();
+        int valAfisat = instance.getEcran().getDisplayValue();
         assertEquals(0, valAfisat);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

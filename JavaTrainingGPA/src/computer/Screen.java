@@ -1,53 +1,55 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This is the screen of OO Computer. It has an
+ * internal memory that keeps the string of symbols
+ * that is display on the screen.
  */
 package computer;
 
 /**
- *
+ * This is the screen of OO Computer. It has an
+ * internal memory that keeps the string of symbols
+ * that is display on the screen.
  * @author gheor
  */
 public class Screen {
     
-        private int valoareAfisata = 0;
+        private int displayValue = 0;
 
     /**
      Method display specified parameter value
+     * @param valueToDisplay
      */
         public void display(int valueToDisplay){
             System.out.println(valueToDisplay);
-            valoareAfisata = valueToDisplay;
+            displayValue = valueToDisplay;
         }
     /**
-     Method display specified parameter value
+     Method display 0 on the screen.
      */
         public void clear(){
             System.out.println(0);
-            valoareAfisata = 0;
+            displayValue = 0;
         }
         /**
-     * Get the value of valoareAfisata
+     * Get the value of displayValue
      *
-     * @return the value of valoareAfisata
+     * @return the value of displayValue
      */
-    public int getValoareAfisata() {
-        return valoareAfisata;
+    public int getDisplayValue() {
+        return displayValue;
     }
 
     /**
-     * Set the value of valoareAfisata
+     * Set the value of displayValue
      *
-     * @param valoareAfisata new value of valoareAfisata
+     * @param valoareAfisata new value of displayValue
      */
-    public void setValoareAfisata(int valoareAfisata) {
-        this.valoareAfisata = valoareAfisata;
+    public void setDisplayValue(int valoareAfisata) {
+        this.displayValue = valoareAfisata;
     }
 
     public void displayMessage(String message){
     
         System.out.println(message);
     }
-    
 }
