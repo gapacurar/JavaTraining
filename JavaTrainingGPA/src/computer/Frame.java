@@ -1,40 +1,39 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Frame of OO computer
  */
 package computer;
 
 import java.util.Scanner;
 
 /**
- *
+ * Frame to mount all components of computer
  * @author gheor
  */
 public class Frame {
     
     private Screen ecran;
-    private Button[] butoane;
-    private Character markupsOfButtons[] = {'0','1','2','3','4','5','6','7','8','9','+','-','*','/','='};
+    private Button[] buttons;
+    private final Character markupsOfButtons[] = {'0','1','2','3','4','5','6','7','8','9','+','-','*','/','='};
     private Processor procesor;
 
     public Frame() {
         ecran = new Screen();
         procesor = new Processor();
-        butoane =  new Button[15];
+        buttons =  new Button[15];
         int i = 0;
         for(Character currentMarkup:markupsOfButtons){
             Button newButton = new Button();
             newButton.drawOnButton(currentMarkup);
-            butoane[i] = newButton;
+            buttons[i] = newButton;
             i++;
         }
     }
-    
+    /** Starts the OO computer*/
     public void start(){
         ecran.display(0);
     }
-    
+    /** Display message on scree
+     * @param messagen*/
     public void displayMessageOnScreen(String message){
         ecran.displayMessage(message);
     }
@@ -74,11 +73,11 @@ public class Frame {
     }
 
     public Button[] getButoane() {
-        return butoane;
+        return buttons;
     }
 
     public void setButoane(Button[] butoane) {
-        this.butoane = butoane;
+        this.buttons = butoane;
     }
 
     public Processor getProcesor() {
