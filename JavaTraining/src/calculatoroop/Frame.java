@@ -15,10 +15,11 @@ public class Frame {
     
     private Screen ecran;
     private Button[] butoane;
-    private Character markupsOfButtons[] = {'0','1','2','3','4','5','6','7','8','9','+','-','*','/','='};
+    private final Character markupsOfButtons[] = {'0','1','2','3','4','5','6','7','8','9','+','-','*','/','='};
     private Processor procesor;
 
     public Frame() {
+        // Assamble the OO Computer from its components
         ecran = new Screen();
         procesor = new Processor();
         butoane =  new Button[15];
@@ -30,15 +31,22 @@ public class Frame {
             i++;
         }
     }
-    
+    /**
+     * Starts the OO Computer displaying 0 on screen
+     */
     public void start(){
         ecran.display(0);
     }
-    
+    /**
+     * Display a message on the screen of OO computer
+     */
     public void displayMessageOnScreen(String message){
         ecran.displayMessage(message);
     }
-    
+    /**
+     * Assures introduction of an operand by user from
+     * console. The operand is mainly a number.
+     */
     public void pushButtonsForOperand(){
         Scanner newScanner = new Scanner(System.in);
         String readit = newScanner.nextLine();
@@ -50,7 +58,10 @@ public class Frame {
         else
             procesor.setAlDoileaOperand(operand); 
     }
-
+/**
+ * Assures introduction of an operator from console.
+ * The operator could be *,/,+ and -
+ */
     public void pushButtonsForOperator(){
         Scanner newScanner = new Scanner(System.in);
         String readit = newScanner.nextLine();
@@ -59,7 +70,10 @@ public class Frame {
         ecran.displayMessage(operand.toString());
         procesor.setOperator(operand);
     }
-    
+    /**
+     * Simulates introducing = operator and computes
+     * the result of specified math expression.
+     */
     public void pushButtonEqual(){
         Double result = procesor.calculeaza();
         ecran.displayMessage(result.toString());
