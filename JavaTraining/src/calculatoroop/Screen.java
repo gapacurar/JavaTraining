@@ -1,12 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * OO computer screen
  */
 package calculatoroop;
 
 /**
- *
+ * OO computer Screen has the function to display one or more symbols
+ * on it keeping the string of symbols on the screen in a local
+ * memory.
  * @author gheor
  */
 public class Screen {
@@ -15,13 +15,14 @@ public class Screen {
 
     /**
      Method display specified parameter value
+     * @param valueToDisplay
      */
         public void display(int valueToDisplay){
             System.out.println(valueToDisplay);
             valoareAfisata = valueToDisplay;
         }
     /**
-     Method display specified parameter value
+     Method clear the screen and display 0
      */
         public void clear(){
             System.out.println(0);
@@ -44,7 +45,12 @@ public class Screen {
     public void setValoareAfisata(int valoareAfisata) {
         this.valoareAfisata = valoareAfisata;
     }
-
+    
+    /**
+     * Method display specified string on the screen.
+     * String is also saved in the memory of screen.
+     * @param message 
+     */
     public void displayMessage(String message){
     
         System.out.println(message);
