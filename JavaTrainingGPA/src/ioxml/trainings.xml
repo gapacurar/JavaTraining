@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<trainings>
+    <training>
+        <nr>1</nr>
+        <description>Java Training</description>
+    </training>
+    <training>
+        <nr>2</nr>
+        <description>HTML Training</description>
+    </training>
+    <training>
+        <nr>3</nr>
+        <description>CSS Training</description>
+    </training>
+    <training>
+        <nr>4</nr>
+        <description>XML Training</description>
+    </training>   
+    <training>
+        <nr>5</nr>
+        <description>Web Components Training</description>
+    </training>     
+</trainings>

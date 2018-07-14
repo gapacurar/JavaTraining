@@ -31,7 +31,7 @@ public class JDBCExample {
             statement = connection.createStatement();
             //System.out.println("Statement is "+statement.toString());
             //statement.execute("CREATE TABLE FIRSTTABLE (ID INT PRIMARY KEY, NAME VARCHAR(12))");
-            statement.execute("INSERT INTO FIRSTTABLE VALUES (10,'TEN'),(20,'TWENTY'),(30,'THIRTY')");
+            //statement.execute("INSERT INTO FIRSTTABLE VALUES (10,'TEN'),(20,'TWENTY'),(30,'THIRTY')");
             resultSet = statement.executeQuery("SELECT ID, NAME FROM FIRSTTABLE");
             //boolean resultSetHasRows = resultSet.next(); 
             if (null!=resultSet)

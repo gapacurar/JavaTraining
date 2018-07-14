@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/trainings.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE trainings SYSTEM "trainings.dtd">
+
+    <trainings>
+    ...
+    </trainings>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT trainings (training)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT training (nr|description)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT nr (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT description (#PCDATA)>
