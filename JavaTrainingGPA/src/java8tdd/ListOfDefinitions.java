@@ -5,7 +5,7 @@ package java8tdd;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import jdk.nashorn.internal.objects.NativeArray;
+//import jdk.nashorn.internal.objects.NativeArray;
 
 /**
  * Program returns the list of definition for a specified collection of figures
