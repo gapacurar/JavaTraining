@@ -1,7 +1,8 @@
+package multiprocess;
+
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java6multithreading.Multiprocess;
